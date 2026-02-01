@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Facto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div class="layer-blur"></div>
+    <div class="gradient-orb gradient-orb-1"></div>
+    <div class="gradient-orb gradient-orb-2"></div>
+    
+    <!-- Three.js 3D Container -->
+    <div id="three-container"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="logo">FACT</h1>
+            <nav>
+                <div class="nav-link has-dropdown">
+                    <span>HOBBIES</span>
+                    <div class="nav-underline"></div>
+                    <div class="dropdown-menu">
+                        <a href="https://bwfbadminton.com/rankings/" class="dropdown-item">Badminton</a>
+                        <a href="https://www.gordonramsay.com/" class="dropdown-item">Cooking</a>
+                        <a href="https://playvalorant.com/en-gb/" class="dropdown-item">Valorant</a>
+                    </div>
+                </div>
+                <a href="https://www.instagram.com/sfnthnl/" class="nav-link">
+                    <span>SOCIALS</span>
+                    <div class="nav-underline"></div>
+                </a>
+                <a href="https://adi.edu.ph/adinew/" class="nav-link">
+                    <span>SCHOOL</span>
+                    <div class="nav-underline"></div>
+                </a>
+            </nav>
+        </header>
+
+        <main class="content">
+            <h1 class="main-title">About</h1>
+            <p class="description">
+                A website created by Yosef Nathaniel Facto 
+                <br>
+                His very first website that shows some information
+                <br>
+                A senior high school student with great interest in technological advancement
+            </p>
+            
+            <div class="cta-buttons">
+               <button class="btn-primary" onclick="window.location.href='https://romaaaaa.vercel.app/'">PROJECTS</button>
+                <button class="btn-secondary">Contact Me</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Floating particles for subtle animation -->
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                    </svg>
+                    <div>
+                        <p class="contact-label">Email</p>
+                        <p class="contact-value">yosef0624@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <div>
+                        <p class="contact-label">Phone</p>
+                        <p class="contact-value">+63 967-361-5088</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Custom Three.js Script -->
+    <script src="script.js"></script>
+    
+    <!-- Contact Modal Script -->
+    <script>
+        // Get modal element
+        const modal = document.getElementById('contactModal');
+        const contactBtn = document.querySelector('.btn-secondary');
+        const closeBtn = document.querySelector('.close-modal');
+        
+        // Open modal when clicking Contact Me button
+        contactBtn.addEventListener('click', () => {
+            modal.style.display = 'flex';
+        });
+        
+        // Close modal when clicking X
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
